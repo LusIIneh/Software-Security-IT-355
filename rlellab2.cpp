@@ -31,20 +31,7 @@ string RLE1_decode(const string& input) {
 
     while (i < n) {
         int count = 0;
-
-
-        /*while (i < n && isdigit(input[i])) {
-            count = count * 10 + (input[i] - '0');
-            i++;
-        }
-        */
-        count = input[i];
-        /*if (i < n) {
-            char ch = input[i];
-            result.append(count, ch);
-            i++;
-        }
-        */
+        count = input[i]
         result.append(count, input[i + 1]);
         i += 2;
     }
@@ -64,4 +51,5 @@ int main() {
     cout << "Decoded: " << RLE1_decode(encoded) << endl;
 
     return 0;
+
 }
